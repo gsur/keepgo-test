@@ -11,6 +11,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Baseline endpoint — Resource контроллер для Posts
 Route::apiResource('posts', PostController::class);
+Route::apiResource('tags', \App\Http\Controllers\TagController::class);
 
 Route::prefix('posts/{post}')->group(function () {
 
