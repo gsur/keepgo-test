@@ -18,7 +18,7 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        return new PostResource($post->load('user'));
+        return new PostResource($post->load([ 'user', 'tags']));
     }
 
     public function store(StorePostRequest $request)
